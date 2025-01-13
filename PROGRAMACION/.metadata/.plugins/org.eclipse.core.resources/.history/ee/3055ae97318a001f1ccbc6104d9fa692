@@ -1,0 +1,23 @@
+package Ejercicio_repaso;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int sumaTotal = 0;
+		int contador = 0; 
+
+		for (contador = 3; contador<=27; contador = contador + 3) { 
+			sumaTotal += contador;
+			System.out.print(contador + "+");
+			if (contador == 27) {
+				contador+= 3; 
+				sumaTotal += contador;
+				System.out.println(contador + " = " + sumaTotal);
+			}
+		}
+
+	}
+
+}

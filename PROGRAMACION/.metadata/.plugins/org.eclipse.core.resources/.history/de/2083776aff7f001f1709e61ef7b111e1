@@ -1,0 +1,53 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in); 
+		
+		String cadena1;
+		String cadena2; 
+		Boolean repetimosBucle = null; 
+		
+		
+		do {
+			
+			System.out.println("Indicame una palabra cualquiera");
+			
+			cadena1 = sca.nextLine(); 
+			
+			System.out.println("Indicame otra palabra cualquiera");
+			
+			cadena2 = sca.nextLine(); 
+			
+			if (cadena1.isEmpty() == true || cadena2.isEmpty() == true) {
+				repetimosBucle = true; 
+				System.out.println("No puedes dejar palabras en blanco");
+			}
+			else if (cadena1.isBlank() == true || cadena2.isEmpty() == true) {
+				repetimosBucle = true; 
+				System.out.println("No puedes poner palabras con espacios");
+			}
+            else {
+            	repetimosBucle = false; 
+			}
+				
+			
+		} while(repetimosBucle == true); 
+		
+		
+		if (cadena1.compareTo(cadena2) < 0) {
+			System.out.println("La palabra ordenada es " + cadena1 + " " + cadena2);
+		} else if (cadena2.compareTo(cadena1) < 0) {
+			System.out.println("La palabra ordenada es " + cadena2 + " " + cadena1);
+		}
+		
+		sca.close();
+
+	}
+
+}

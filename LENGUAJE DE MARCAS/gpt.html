@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoo Maravillas</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #e8f5e9;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+      }
+      header {
+        background-color: #388e3c;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      }
+      nav {
+        margin: 20px 0;
+      }
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #ffffff;
+        font-weight: bold;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #ffeb3b;
+      }
+      section {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .animal {
+        border: 1px solid #388e3c;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 5px;
+        background-color: #f1f8e9;
+        transition: transform 0.3s;
+      }
+      .animal:hover {
+        transform: scale(1.02);
+      }
+      .animal img {
+        max-width: 100%;
+        border-radius: 5px;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+        padding: 15px 0;
+        background-color: #388e3c;
+        color: white;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+      h2 {
+        color: #388e3c;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Bienvenidos al Zoo Maravillas</h1>
+      <nav>
+        <a href="#animales">Animales</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <section id="animales">
+      <h2>Nuestros Animales</h2>
+      <div class="animal">
+        <h3>León</h3>
+        <img src="https://example.com/leon.jpg" alt="León" />
+        <p>El rey de la selva, conocido por su melena majestuosa.</p>
+      </div>
+      <div class="animal">
+        <h3>Elefante</h3>
+        <img src="https://example.com/elefante.jpg" alt="Elefante" />
+        <p>El mamífero terrestre más grande, famoso por su memoria.</p>
+      </div>
+      <div class="animal">
+        <h3>Jirafa</h3>
+        <img src="https://example.com/jirafa.jpg" alt="Jirafa" />
+        <p>Con su largo cuello, es el animal más alto del mundo.</p>
+      </div>
+    </section>
+
+    <section id="horarios">
+      <h2>Horarios</h2>
+      <p>Abierto todos los días de 9:00 a 17:00.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        Para más información, llámanos al 123-456-7890 o envíanos un correo a
+        <a href="mailto:info@zoomaravillas.com">info@zoomaravillas.com</a>.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Zoo Maravillas. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+</html>

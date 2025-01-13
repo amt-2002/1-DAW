@@ -1,0 +1,35 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in); 
+		
+		String cadena1;
+		String cadena2; 
+		
+		do {
+			
+			System.out.println("Indicame una palabra cualquiera");
+			
+			cadena1 = sca.nextLine(); 
+			
+			System.out.println("Indicame otra palabra cualquiera");
+			
+			cadena2 = sca.nextLine(); 
+			
+			if () {
+				
+			}
+			
+		} while(X); 
+		
+		sca.close();
+
+	}
+
+}

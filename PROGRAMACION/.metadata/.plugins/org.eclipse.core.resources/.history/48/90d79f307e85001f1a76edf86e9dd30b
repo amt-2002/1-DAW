@@ -1,0 +1,19 @@
+package Ejercicio2;
+
+public class Ejercicio19 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int lastNumber = 0; 
+		
+		for (int i = 1; i <=9; i++) {
+			System.out.println("");
+			for (int x = 1; x <= lastNumber; x++) {
+				lastNumber++; 
+				System.out.print(x);
+			}
+		}
+	}
+
+}

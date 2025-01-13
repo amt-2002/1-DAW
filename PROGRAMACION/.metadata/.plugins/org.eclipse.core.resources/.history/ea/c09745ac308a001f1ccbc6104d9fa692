@@ -1,0 +1,17 @@
+package Ejercicio_repaso;
+
+public class Ejercicio6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int sumaTotal = 0;
+
+		for (int i = 3; i<=30; i = i + 3) {
+			sumaTotal = i + i; 
+			System.out.print("+" + i + "=" );
+		}
+		
+	}
+
+}

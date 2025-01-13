@@ -1,0 +1,34 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sca = new Scanner(System.in);
+		
+	    int numero1;
+	    int numero2;
+		
+		do {
+			System.out.println("Dame un numero"); 
+			
+		    numero1 = sca.nextInt(); 
+			
+			System.out.println("Dame otro numero"); 
+			
+			numero2 = sca.nextInt(); 
+			
+			if (numero1 != numero2) {
+				System.out.println("ERROR: Los numeros deben ser iguales");
+			}
+		}
+		while (numero1 != numero2); 
+		
+		sca.close();
+		
+	}
+
+}

@@ -1,0 +1,28 @@
+package Tema4.EjercicosBasicos;
+
+import java.util.Scanner;
+
+public class Ejercicio8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sca = new Scanner(System.in);
+
+		System.out.println("Introduce el primer numero");
+
+		Integer num1 = sca.nextInt();
+
+		System.out.println("Introduce el segundo numero");
+
+		Integer num2 = sca.nextInt();
+
+		Integer resultado = Calculadora.calcular("div", num1, num2);
+
+		System.out.println("El resultado es " + resultado);
+
+		sca.close();
+
+	}
+
+}

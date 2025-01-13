@@ -1,0 +1,22 @@
+package Ejercicio_repaso;
+
+public class Ejercicio5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int contador = 0; 
+		int contador2 = 0; 
+		
+		do {
+			contador++;
+			contador2++;
+			System.out.print(contador2 + "_");
+			
+		} while (contador < 20);
+		
+
+
+	}
+
+}

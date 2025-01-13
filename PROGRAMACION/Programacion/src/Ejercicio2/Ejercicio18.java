@@ -1,0 +1,26 @@
+package Ejercicio2;
+
+public class Ejercicio18 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//int contador = 0; 
+		
+		for (int x = 0; x<=5; x++) {
+			System.out.println("");
+			for (int i = 1; i<=5; i++) {
+				System.out.print(i + " ");
+			}
+		}
+			
+		/*do {
+			contador++; 
+			for (int i = 1; i<=5; i++) {
+				System.out.print(i + " ");
+			}
+			System.out.println("");
+		} while(contador<=5); */
+	}
+
+}

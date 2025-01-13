@@ -1,0 +1,57 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in); 
+		
+		String nombreCompleto; 
+		Boolean repetimosBucle = false; 
+		
+		do {
+			System.out.println("Indica tu nombre completo");
+			nombreCompleto = sca.nextLine();
+			
+			if (nombreCompleto.isEmpty()) {
+				repetimosBucle = true; 
+			} else if (nombreCompleto.contains(" ") == false) {
+				repetimosBucle = true; 
+			} else {
+				repetimosBucle = false; 
+			} 
+			
+			if (repetimosBucle == true) {
+				System.out.println("Necesitas poner el nombre completo");
+			}
+			
+		} while(repetimosBucle == true); 
+		
+
+	
+		Integer primerEspacio = nombreCompleto.indexOf(" "); 
+		
+		String primerNombre = nombreCompleto.substring(0, primerEspacio); 
+		
+		System.out.println("Nombre: " + primerNombre);
+		
+		Integer segundoEspacio = nombreCompleto.indexOf(" ", primerEspacio+1); 
+		
+		String primerApellido = nombreCompleto.substring(primerEspacio, segundoEspacio); 
+		
+		System.out.println("Primer apellido:" + primerApellido);
+		
+		Integer ultimoEspacio = nombreCompleto.length(); 
+		
+		String segundoApellido = nombreCompleto.substring(segundoEspacio, ultimoEspacio); 
+		
+		System.out.println("Segundo Apellido: " + segundoApellido);
+		
+		sca.close();
+
+	}
+
+}

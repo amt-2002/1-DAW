@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    table {
+      width: 100%;
+    }
+    
+    td,
+    th {
+      padding: 10px;
+    }
+
+    th {
+      background-color: red;
+    }
+
+    table,
+    td,
+    th {
+      border: 1px solid black;
+      text-align: center;
+      border-collapse: collapse;
+    }
+  </style>
+  <body>
+    <h1 style="text-align: center">Horarios de Clase</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miercoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8:00 - 9:00</td>
+          <td rowspan="2">Matematicas</td>
+          <td>Historia</td>
+          <td rowspan="3">Fisica</td>
+          <td>Ingles</td>
+          <td>Quimica</td>
+        </tr>
+        <tr>
+          <td>9:00 - 10:00</td>
+          <td rowspan="2">Geografia</td>
+          <td>Biologia</td>
+          <td rowspan="2">Educacion fisica</td>
+        </tr>
+        <tr>
+          <td>10:00 - 11:00</td>
+          <td>Matematicas</td>
+          <td>Historia</td>
+        </tr>
+        <tr>
+          <td>11:00 - 12:00</td>
+          <td colspan="2">Proyecto de ciencia</td>
+          <td>Geografia</td>
+          <td colspan="2">Arte</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="6" style="background-color: aquamarine">
+            Horario sujeto a cambios
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

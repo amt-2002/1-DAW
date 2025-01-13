@@ -1,0 +1,42 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in); 
+		
+		String correo;
+		Boolean repetimosBucle = null; 
+		
+		do {
+			
+			System.out.println("Indicame tu correo");
+			
+			correo = sca.nextLine(); 
+			
+			if (correo.contains("@") == false || correo.contains(".") == false || correo.contains("@.") == true) {
+				repetimosBucle = true; 
+				System.out.println("Necesita contener un @ y un . y no pueden estar correlativo");
+			}
+			else if (correo.endsWith(".")) {
+				repetimosBucle = true; 
+				System.out.println("No puede terminar con un .");
+			}
+            else {
+            	repetimosBucle = false; 
+			}
+				
+			
+		} while(repetimosBucle == true); 
+		
+		System.out.println("Correo añadido");
+		
+		sca.close();
+
+	}
+
+}

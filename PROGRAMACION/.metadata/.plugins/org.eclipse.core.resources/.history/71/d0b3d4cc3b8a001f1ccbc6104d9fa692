@@ -1,0 +1,75 @@
+package Ejercicio_repaso;
+
+import java.util.Scanner;
+
+public class Ejercicio11 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		System.out.println("*** MENÚ ***");
+		System.out.println("   1. Sumar");
+		System.out.println("   2. Restar");
+		System.out.println("   3. Multiplicar");
+		System.out.println("   4. Dividir");
+		System.out.println("   0. Salir");
+		
+		Scanner sca = new Scanner(System.in); 
+		
+		Boolean repetimosBucle = false; 	
+		do {
+			
+			int operacionRealizada = 0; 
+			
+			System.out.println("Elige una opcion del menu");
+			
+			int opcion = sca.nextInt();
+			
+			if (opcion == 0) {
+				repetimosBucle = false; 
+				System.out.println("Adioos");
+				return; 
+			}
+			
+			System.out.println("Indicanos un numero entero");
+			
+			int primerNumero = sca.nextInt();
+			
+			System.out.println("Indicanos otro numero entero");
+			
+			int segundoNumero = sca.nextInt();
+			
+			if (opcion == 1) {
+				repetimosBucle = true;
+				operacionRealizada = primerNumero + segundoNumero; 
+			} else if (opcion == 2) {
+				repetimosBucle = true;
+				operacionRealizada = primerNumero - segundoNumero; 
+			} else if (opcion == 3) {
+				repetimosBucle = true;
+				operacionRealizada = primerNumero * segundoNumero; 
+			} else if (opcion == 4) {
+				if (segundoNumero == 0) {
+					System.out.println("No se puede dividir un numero entre 0");
+					repetimosBucle = false;
+					return; 
+				}
+				repetimosBucle = true;
+				operacionRealizada = primerNumero / segundoNumero; 
+			} else {
+				repetimosBucle = false; 
+				System.out.println("OPCION NO VALIDA");
+				return; 
+			}
+			
+			System.out.println("La operacion realizada es " + operacionRealizada);
+		
+		} while (repetimosBucle); 
+		
+		
+		
+		sca.close();
+
+	}
+
+}

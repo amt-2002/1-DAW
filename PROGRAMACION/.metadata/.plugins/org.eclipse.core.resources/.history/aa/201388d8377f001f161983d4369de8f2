@@ -1,0 +1,29 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sca = new Scanner(System.in);
+		
+		int numeros = 0; 
+		int numeroSolicitado;
+		
+		do {
+			System.out.println("Indica un numero progresivo (Cuando indique 0 terminara la suma)");
+			System.out.println("Lleva sumado " + numeros);
+			numeroSolicitado = sca.nextInt(); 
+			numeros = numeros +  numeroSolicitado; 
+		}
+		while (numeroSolicitado > 0); 
+		
+		System.out.println("La cantidad sumada es " + numeros);
+		
+		sca.close();
+		
+	}
+
+}

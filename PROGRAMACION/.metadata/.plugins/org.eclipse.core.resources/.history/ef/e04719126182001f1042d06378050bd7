@@ -1,0 +1,41 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio13 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in); 
+		
+		System.out.println("Escribe el texto");
+		
+		String texto = sca.nextLine();
+		
+		int contador = 0; 
+		int longitudTexto = texto.length(); 
+		int lastContador = 0; 
+		boolean repetimosBucle = true; 
+		
+		System.out.println(longitudTexto);
+		
+		//Buenos días, mi nombre es Blau Blau.
+		
+		do {
+			lastContador = contador; 
+			contador = 5 + contador; 
+			if (contador > longitudTexto) {
+				contador = longitudTexto;
+			}
+			String textoCortado = texto.substring(lastContador, contador); 
+			System.out.println(textoCortado);
+			
+			
+		} while(repetimosBucle == true); 
+		
+		sca.close();
+
+	}
+
+}

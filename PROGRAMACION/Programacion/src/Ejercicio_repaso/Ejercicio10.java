@@ -1,0 +1,54 @@
+package Ejercicio_repaso;
+
+import java.util.Scanner;
+
+public class Ejercicio10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in); 
+		
+		//https://www.google.com
+		
+		System.out.println("Indicanos una direccion web");
+		
+		String direccionWeb = sca.nextLine(); 
+		
+		//
+		
+		Integer ultimaBarra = direccionWeb.lastIndexOf("/");
+		
+		String primerTexto = direccionWeb.substring(0, ultimaBarra+1); 
+		
+		System.out.println(primerTexto);
+		
+		//
+		
+		Integer utimaW = direccionWeb.lastIndexOf("w"); 
+		
+		String segundoTexto = direccionWeb.substring(ultimaBarra+1, utimaW+1); 
+		
+		System.out.println(segundoTexto);
+		
+		//
+		
+		Integer utimoPunto = direccionWeb.lastIndexOf("."); 
+		
+		String tercerTexto = direccionWeb.substring(utimaW+2, utimoPunto); 
+		
+		System.out.println(tercerTexto);
+		
+		//
+		
+		Integer cadenaEntera = direccionWeb.length(); 
+		
+		String cuartoTexto = direccionWeb.substring(utimoPunto+1, cadenaEntera); 
+		
+		System.out.println(cuartoTexto);
+		
+		sca.close();
+
+	}
+
+}

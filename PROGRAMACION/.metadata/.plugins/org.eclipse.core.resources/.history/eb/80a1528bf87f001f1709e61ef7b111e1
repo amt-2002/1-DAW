@@ -1,0 +1,36 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sca = new Scanner(System.in);
+		
+	    int numero1;
+	    int numero2;
+		
+		do {
+			System.out.println("Escribe un numero entero"); 
+			
+		    numero1 = sca.nextInt(); 
+			
+			System.out.println("Escribe otro numero entero"); 
+			
+			numero2 = sca.nextInt(); 
+			
+			if (numero1 != numero2) {
+				System.out.println("ERROR: Los numeros deben ser iguales");
+			}
+		}
+		while (numero1 != numero2); 
+		
+		System.out.println("SUCCESS: Los numeros son iguales, saludos");
+		
+		sca.close();
+		
+	}
+
+}

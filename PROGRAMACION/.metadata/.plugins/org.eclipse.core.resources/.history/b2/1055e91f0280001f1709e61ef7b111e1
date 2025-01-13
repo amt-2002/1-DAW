@@ -1,0 +1,47 @@
+package Ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in); 
+		
+		String username;
+		Boolean repetimosBucle = null; 
+		
+		do {
+			
+			repetimosBucle = false; 
+			
+			System.out.println("Indicame tu username");
+			
+			username = sca.nextLine(); 
+			
+			String userFixed = username.trim().toUpperCase();
+
+			int indexUsername = userFixed.length(); 
+			
+			if (indexUsername < 10) {
+				System.out.println("Debe contener al menos 10 caracteres");
+				repetimosBucle = true;
+			}
+			
+			if (userFixed.isBlank() == true) {
+				System.out.println("No puede contener espacios en blanco");
+				repetimosBucle = true; 
+			}
+			
+			
+			
+		} while(repetimosBucle == true); 
+		
+		System.out.println("Correo añadido");
+		
+		sca.close();
+
+	}
+
+}
