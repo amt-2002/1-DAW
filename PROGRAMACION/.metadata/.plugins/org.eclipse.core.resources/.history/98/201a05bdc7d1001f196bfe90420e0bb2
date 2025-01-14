@@ -1,0 +1,12 @@
+package Tema4.Ejercicio19;
+
+import Tema4.Ejercicio18.Alumno;
+
+public class Ejercicio19 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
