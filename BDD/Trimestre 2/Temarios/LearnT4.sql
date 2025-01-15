@@ -1,5 +1,149 @@
 ALTER SESSION SET NLS_DATE_LANGUAGE = 'SPANISH';
 
+drop table estudiantes cascade constraints;
+
+create table estudiantes(
+
+    id int primary key,
+
+    nombre varchar(50),
+
+    apellidos varchar(100),
+
+    edad int
+
+);
+
+--Actividad 3
+
+alter table estudiantes add ciclo varchar2(50) default 'DAMDAW';
+
+insert into estudiantes values (1,'María','García',28,null);
+
+insert into estudiantes (id, nombre, apellidos, edad) values (3,'Pedro','García',28);
+
+insert into estudiantes (id,nombre) values (2,'Juan');
+
+select * from estudiantes;
+
+update estudiantes set apellidos = 'González' 
+
+    where id = 1;
+
+update estudiantes set nombre = 'Pedro Luis', edad=30 where id = 3;
+
+update estudiantes set ciclo = 'DAW';
+
+update estudiantes set nombre = 'Jua' where id = 2;
+
+update estudiantes set nombre = 'Juan' where id = 2;
+
+--'28/11/2024' '28-11-2024' '28/11/24'
+
+update estudiantes set edad = 23 where id = 2 or id = 3;
+
+update estudiantes set edad = 24 where id in (1,2,3);
+
+--Actividad 4
+
+insert into estudiantes (id,nombre) values (4,'Luis');
+
+insert into estudiantes (id,nombre) values (5,'Pedro');
+
+update estudiantes set edad = 23 where id = 4;
+
+update estudiantes set edad = 19 where id = 5;
+
+select * from estudiantes;
+
+--Actividad 5
+
+update estudiantes set edad = 19;
+
+delete from estudiantes where id = 3;
+
+drop table notas cascade constraints;
+
+create table notas(
+
+    id int primary key,
+
+    valor number(3,1),
+
+    id_estudiante int,
+
+    foreign key(id_estudiante) references estudiantes(id) 
+
+);
+
+insert into notas values (1,7,1);
+
+insert into notas values (2,4,2);
+
+select * from notas;
+
+delete from estudiantes where id = 2;
+
+--Ejemplo modo on delete cascade
+
+drop table notas cascade constraints;
+
+create table notas(
+
+    id int primary key,
+
+    valor number(3,1),
+
+    id_estudiante int,
+
+    foreign key(id_estudiante) references estudiantes(id) on delete cascade
+
+);
+
+insert into notas values (1,7,1);
+
+insert into notas values (2,4,2);
+
+delete from estudiantes where id = 2;
+
+select * from estudiantes;
+
+select * from notas;
+
+
+--Ejemplo modo on delete set null
+
+insert into estudiantes (id,nombre) values (2,'Juan');
+
+drop table notas cascade constraints;
+
+create table notas(
+
+    id int primary key,
+
+    valor number(3,1),
+
+    id_estudiante int,
+
+    foreign key(id_estudiante) references estudiantes(id) on delete set null
+
+);
+
+insert into notas values (1,7,1);
+
+insert into notas values (2,4,2);
+
+select * from notas;
+
+select * from estudiantes;
+
+delete from estudiantes where id = 2;
+
+select * from estudiantes;
+
+select * from notas;
+ 
+
 drop table socios cascade constraints;
 create table socios(
     codigo_socio char(8) check(regexp_like(codigo_socio,'S[0-9]{5}24')) primary key,
@@ -141,7 +285,7 @@ UPDATE FUTBOLISTAS SET ID_EQUIPO = 3 WHERE ID LIKE 'F00420';
 UPDATE FUTBOLISTAS SET ID_EQUIPO = 1 WHERE ID LIKE 'F00920';
  
 DELETE FROM FUTBOLISTAS WHERE ID LIKE 'F00120' OR ID LIKE 'F00420';
- 
+SELECT * FROM FUTBOLISTAS;
 --Ejercicio 1
 select nombre from futbolistas;
 select posicion from futbolistas;
@@ -149,13 +293,16 @@ select distinct posicion from futbolistas;
  
 select * from partidos;
 select estadio "Estadio", id_equipo_casa "ID local" from partidos;
-select p.estadio, id_equipo_casa from partidos p;
+select p.estadio, p.id_equipo_casa from partidos p;
  
 --Ejercicio 2
 select distinct posicion "Demarcaciones" from futbolistas;
 select * from futbolistas;
  
 --Ejercicio 3
+
+SELECT FUTBOLISTAS.APELLIDOS "Futbolista" FROM FUTBOLISTAS WHERE POSICION = 'DEFENSA';
+
 select F.apellidos "Futbolista" 
     from futbolistas F 
     where posicion = 'DEFENSA';
@@ -275,8 +422,51 @@ from
 	dual;
 select '09/01/2025' from dual;
 select to_date('09/01/2025') from dual;
- 
---Ejercicio 16
+
+SELECT * FROM FUTBOLISTAS;
+
+UPDATE FUTBOLISTAS SET POSICION = NULL WHERE ID = 'F00220';
+UPDATE FUTBOLISTAS SET SALARIO = NULL WHERE NOMBRE = 'LUIS';
+
+
+INSERT INTO FUTBOLISTAS (ID, NOMBRE, APELLIDOS, FECHA_NACIMIENTO, POSICION, SALARIO, ID_EQUIPO) VALUES ('F00420', 'DIEGO', 'GOMEZ', '11-11-1998', 'PORTERO', NULL, 1);
+INSERT INTO FUTBOLISTAS VALUES ('F00420', 'DIEGO', 'GOMEZ', '11-11-1998', 'PORTERO', NULL, 1);
+DELETE FROM FUTBOLISTAS WHERE ID = 'F00420';
+
+-- NVL Y DECODE 
+SELECT NVL(SALARIO,0) FROM FUTBOLISTAS; --SI ES NULL PONE 0
+
+SELECT DECODE(SALARIO, NULL ,'NO TIENE', SALARIO) FROM FUTBOLISTAS; --SI ES NULL PONE 0
+SELECT DECODE(SALARIO, NULL, 'NO TIENE', 110000, 'BUEN SUELDO', SALARIO) FROM FUTBOLISTAS; 
+
+
+-- FUNCTIONES DE AGREGADO
+
+SELECT COUNT(*) FROM FUTBOLISTAS; -- Devuelve el número de filas de la tabla   
+SELECT * FROM FUTBOLISTAS; 
+SELECT COUNT(SALARIO) FROM FUTBOLISTAS;
+
+-- SUM ()
+SELECT SUM(SALARIO) FROM FUTBOLISTAS; -- Devuelve la suma de los valores de la columna
+
+-- MIN ()
+SELECT MIN(SALARIO) FROM FUTBOLISTAS; -- Devuelve el valor mínimo de la columna
+
+-- MAX ()
+SELECT MAX(SALARIO) FROM FUTBOLISTAS; -- Devuelve el valor máximo de la columna
+
+-- AVG ()
+SELECT AVG(SALARIO) FROM FUTBOLISTAS; -- Devuelve el valor medio de la columna
+SELECT ROUND(AVG(SALARIO),2) "SALARIO MEDIO" FROM FUTBOLISTAS; -- Devuelve el valor medio de la columna
+
+-- GROUP BY
+SELECT POSICION FROM FUTBOLISTAS GROUP BY POSICION; -- Devuelve el número de futbolistas por posición
+
+-- HAVING
+SELECT POSICION, COUNT(*) FROM FUTBOLISTAS GROUP BY POSICION HAVING POSICION = 'PORTERO'; -- Devuelve el número de futbolistas por posición
+SELECT NOMBRE, POSICION, COUNT(*) FROM FUTBOLISTAS GROUP BY NOMBRE, POSICION HAVING POSICION IS NOT NULL; -- Devuelve el número de futbolistas por posición que no sean nulos
+
+
 
 COMMIT;
  
