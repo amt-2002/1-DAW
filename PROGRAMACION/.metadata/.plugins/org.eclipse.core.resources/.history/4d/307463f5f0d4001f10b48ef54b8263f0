@@ -1,0 +1,17 @@
+package Tema4.Ej29;
+
+public class Ej29 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//String dni, Double nota, Curso curso, String nombre, Integer edad
+
+		Curso curso = new Curso("1", "DAM-DAW");
+		
+		Alumno alumno1 = new Alumno("21154413f", 6.7, curso, "Angel", null);
+
+		System.out.println(alumno1.validar());
+		
+	}
+
+}

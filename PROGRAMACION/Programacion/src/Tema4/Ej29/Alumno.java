@@ -1,0 +1,119 @@
+package Tema4.Ej29;
+
+import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Alumno {
+
+	private String dni;
+	private Double nota;
+	private Curso curso;
+	private String nombre;
+	private Integer edad;
+
+	public Alumno(String dni, Double nota, Curso curso, String nombre, Integer edad) {
+		super();
+		this.dni = dni;
+		this.nota = nota;
+		this.curso = curso;
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+
+	public Integer getEdad() {
+		return edad;
+	}
+
+	public void setEdad(Integer edad) {
+		this.edad = edad;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Curso getCurso() {
+		return curso;
+	}
+
+	public void setCurso(Curso curso) {
+		this.curso = curso;
+	}
+
+	public String getDni() {
+		return dni;
+	}
+
+	public void setDni(String dni) {
+		this.dni = dni.toUpperCase();
+	}
+
+	public Double getNota() {
+		return nota;
+	}
+
+	public void setNota(Double nota) {
+		this.nota = nota;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dni);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Alumno other = (Alumno) obj;
+		return Objects.equals(dni, other.dni);
+	}
+
+	@Override
+	public String toString() {
+		return "Alumno [ " + curso.getIdentificador() + " / " + curso.getDescripcion() + " ]";
+	}
+
+	public Boolean validarDNI(String dni) {
+		if (dni.equals(null)) {
+			return false;
+		} else if (dni.length() < 9) {
+			return false;
+		}
+
+		Pattern patron = Pattern.compile("[0-9]{7,8}[A-Z a-z]"); // EJ28
+
+		Matcher match = patron.matcher(dni);
+
+		if (!match.matches()) {
+			return false;
+		}
+
+		return true;
+	}
+
+	public Boolean validar() {
+		if (validarDNI(this.dni)) {
+			if (!this.dni.equals(null)) {
+				if (!this.nombre.equals(null) && this.nombre.length() < 10) {
+					if (this.edad != null && (this.edad >= 12 || this.edad <= 65)) {
+						if (this.curso != null) {
+							return true;
+						}
+					}
+				}
+			}
+		}
+		return false;
+	}
+
+}

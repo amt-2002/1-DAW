@@ -4,17 +4,17 @@ public class Alumno {
 	
 	private String dni;
 	private Double nota;
-	private String curso;
+	private Curso curso;
 	
 	
 	public Alumno() {
 	}
 	
-	public String getCurso() {
+	public Curso getCurso() {
 		return curso;
 	}
 
-	public void setCurso(String curso) {
+	public void setCurso(Curso curso) {
 		this.curso = curso;
 	}
 
@@ -33,6 +33,13 @@ public class Alumno {
 	public void setNota(Double nota) {
 		this.nota = nota;
 	}
+
+	@Override
+	public String toString() {
+		return "Alumno [ " + curso.getIdentificador() + " / " + curso.getDescripcion() + " ]";
+	}
+	
+	
 
 	
 }
