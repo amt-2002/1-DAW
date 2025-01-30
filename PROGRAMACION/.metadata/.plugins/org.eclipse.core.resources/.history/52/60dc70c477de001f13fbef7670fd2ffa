@@ -1,0 +1,35 @@
+package Tema4.Ej41;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in);
+		List<Equipo> equipos = new ArrayList<>();
+		
+		for (int i = 0; i < 2; i++) {
+			System.out.println("Cual es el nombre del equipo");
+			String nEquipo = sca.nextLine();
+			Equipo equipo = new Equipo(nEquipo);
+			for(int x = 0; x < 3; i++) {
+				
+			}
+			equipos.add(equipo);
+		}
+
+	
+		
+		
+		
+		
+		System.out.println(equipos);
+		sca.close();
+		
+	}
+
+}

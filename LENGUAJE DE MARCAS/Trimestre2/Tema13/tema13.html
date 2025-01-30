@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/estilost13.css">
+</head>
+<body>
+    <h2 id="cabecera">CABECERA CON ESTILOS</h2>
+    <div class="enlaces">
+        <h1>PULSE LA SECCION A LA QUE DESEA ACCEDER</h1><br>
+        <a class="botones" href="#C1">Seccion 1</a>
+        <a class="botones" href="#C2">Seccion 2</a>
+        <a class="botones" href="#C3">Seccion 3</a>
+    </div>
+    <br><br>
+    <div id="C1" class="capa1">
+        <h1>SECCION PRIMERA</h1>
+        <p>Esta seccion es la primera de nuestra pagina</p>
+    </div>
+    <div id="C2" class="capa2">
+        <h1>SECCION SEGUNDA</h1>
+        <p>Esta seccion es la segunda de nuestra pagina</p>
+    </div>
+    <div id="C3" class="capa3">
+        <h1>SECCION TERCERA</h1>
+        <p>Esta seccion es la tercera de nuestra pagina</p>
+    </div>
+    <script>
+        function cambiarTexto() {
+            document.getElementById("cabecera").innerHTML = "PRUEBA MODIFICADA"
+        }
+        cambiarTexto()
+    </script>
+</body>
+</html>

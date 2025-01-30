@@ -1,0 +1,12 @@
+package Tema4.Ej41;
+
+public class Partido {
+	
+	private Equipo equipoLocal;
+	private Equipo equipoVisitante;
+	private Resultado resultado;
+	
+	
+	
+
+}

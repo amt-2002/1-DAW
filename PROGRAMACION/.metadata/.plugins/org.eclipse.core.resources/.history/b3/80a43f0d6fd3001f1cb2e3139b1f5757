@@ -1,7 +1,0 @@
-package Tema4.Ej24;
-
-public class Profesor extends Persona {
-	
-	
-
-}

@@ -1,0 +1,28 @@
+package Tema4.Ej37;
+
+import java.util.Iterator;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ColaCadenas cola = new ColaCadenas();
+		
+		cola.añadirCadena("primero");
+		cola.añadirCadena("segundo");
+		
+		System.out.println("Sacado de la cola " + cola.sacarCadena());
+
+		cola.añadirCadena("tercero");
+		
+	
+		for (int i = 0; i < cola.getTamaño() ; i++) {
+			System.out.println("Sacado de la cola " + cola.sacarCadena());
+		}
+	
+		cola.añadirCadena("cuarto");
+		
+	}
+
+}

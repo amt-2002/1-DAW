@@ -81,20 +81,44 @@ SELECT * FROM EMP WHERE SAL = (5000/2 + 500) OR SAL = (5000-1000) OR SAL = (SELE
 
 --21. Seleccionar nombre, sueldo y sueldo formateado (ej.: 1,000.00) de todos los empleados. Se puede usar las máscaras de to_number en to_char.
 
+SELECT ENAME, SAL, TO_CHAR(SAL, '9,999.99') FROM EMP;
+
 --22. Seleccionar nombre, sueldo y sueldo formateado con el simbolo 'Dólar' (ej.: $1,000.00) de todos los empleados. Se puede usar las máscaras de to_number en to_char.
+
+SELECT ENAME, SAL, TO_CHAR(SAL, '$9,999.99') FROM EMP;
 
 --23. Seleccionar nombre, sueldo y sueldo formateado con el simbolo 'Euro' (ej.: 1,000.00€ de todos los empleados. Se puede usar las máscaras de to_number en to_char.
 
+ALTER SESSION SET NLS_CURRENCY = '€';
+SELECT ENAME, SAL, TO_CHAR(SAL, '9,999.99L') FROM EMP;
+
 --24. Seleccionar la fecha del sistema (día, mes, año, horas (24):minutos:segundos).
+
+SELECT TO_CHAR(SYSDATE, 'DD, MM, YYYY, "("HH24")":MI:SS') FROM EMP;
 
 --25. Seleccionar la fecha del sistema (nombre del día, día, nombre del mes, año, horas (24):minutos:segundos). No debe haber espacios sobrantes en el nombre del día o del mes.
 
+-- SELECT TO_CHAR(SYSDATE, 'DAY, DD, MONTH, YYYY, "("HH24")":MI:SS') FROM EMP;
+
+SELECT TO_CHAR(SYSDATE, 'DAY DD') || ', '|| TRIM(TO_CHAR(SYSDATE, 'MONTH')) || ', ' || TO_CHAR(SYSDATE, 'YYYY, "("HH24")":MI:SS') FROM EMP;
+
 --26. Mostrar la fecha del día "1 de enero de 2005", usando una tira de caracteres y su máscara de formato (ej.: 01012021), convertirlo en fecha y empleado en el to_char. No deben aparecer espacios adicionales en el nombre del mes.
+
+SELECT TO_CHAR(TO_DATE('01012005', 'DDMMYYYY'), 'DD "DE" MONTH "DE" YYYY') "FECHA" FROM DUAL;
+
 
 --27. Calcular el número de días vividos hasta hoy por una persona nacida el día 3 de julio de 1970.
 
+SELECT ROUND(ABS(TO_DATE('3/7/1970', 'DD/MM/YYYY') - SYSDATE), 2) || ' DIAS' "DIAS" FROM DUAL;
+
 --28. Calcular el número de segundos transcurridos desde la última medianoche (máscara 'sssss' en to_char).
+
+SELECT TO_CHAR(SYSDATE, 'SSSSS') FROM DUAL;
 
 --29. Calcular el número horas completas transcurridas desde la última medianoche.
 
+SELECT TO_CHAR(SYSDATE, 'HH24') FROM DUAL;
+
 --30. Calcular el número de meses transcurridos entre la fecha de contratación de cada empleado y hoy.
+
+SELECT ENAME, CEIL((((SYSDATE - HIREDATE) / 7) / 4)) || ' MESES' "MESES" FROM EMP;

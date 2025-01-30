@@ -1,0 +1,45 @@
+package Tema4.Ej41;
+
+import java.util.Objects;
+
+public class Jugador {
+	
+	private String nombre;
+	private String dorsal;
+	
+	
+	public Jugador(String nombre, String dorsal) {
+		super();
+		this.nombre = nombre;
+		this.dorsal = dorsal;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Jugador "+ nombre + " - " + dorsal;
+	}
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dorsal);
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Jugador other = (Jugador) obj;
+		return Objects.equals(dorsal, other.dorsal);
+	}
+	
+	
+	
+
+}

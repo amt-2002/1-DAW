@@ -1,0 +1,12 @@
+package Tema4.Ej41;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Equipo {
+
+	private String nombre;
+	private Jugador capitan;
+	private List<String> listPilaCola = new ArrayList<>();
+	
+}
