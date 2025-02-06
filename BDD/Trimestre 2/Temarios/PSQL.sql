@@ -99,4 +99,99 @@ END;
 UNDEFINE INTRODUZCA_NUMERO;
 
 
+--PESTAÑA TEMA6
+--01. CONSTRUCCIÓN DE GUIONES
+DECLARE
+    NUMERO1 INT := 2;
+BEGIN
+    LOOP
+        DBMS_OUTPUT.PUT_LINE(NUMERO1);
+        IF NUMERO1 = 0 THEN --PRIMERA FORMA
+            EXIT;
+        END IF;
+        EXIT WHEN NUMERO1 = 1; --SEGUNDA OPCIÓN
+        --NUMERO1--
+        --NUMERO1++
+        NUMERO1 := NUMERO1 - 2;
+    END LOOP;
+END;
+/
+ 
+--EJERCICIO 13
+DECLARE
+    VAR1 INT := 0;
+    CADENA VARCHAR2(150);
+BEGIN
+    LOOP
+        IF VAR1 = 0 THEN
+            CADENA := VAR1;
+        ELSE
+            CADENA := CADENA || ', ' || VAR1;
+        END IF;
+        VAR1 := VAR1 + 1;
+        EXIT WHEN VAR1 > 20;
+    END LOOP;
+    DBMS_OUTPUT.PUT_LINE(CADENA);
+END;
+/
+ 
+--EJERCICIO 14
+DECLARE
+    VAR1 INT := 0;
+BEGIN   
+    LOOP
+        DBMS_OUTPUT.PUT_LINE(VAR1);
+        VAR1 := VAR1 + 1;
+        IF VAR1 > 20 THEN EXIT;
+        END IF;
+    END LOOP;
+END;
+/
+ 
+DECLARE
+    VAR1 INT := 0;
+BEGIN   
+    WHILE VAR1 >= 0 LOOP
+        DBMS_OUTPUT.PUT_LINE(VAR1);
+        VAR1 := VAR1 + 1;
+        IF VAR1 > 20 THEN EXIT;
+        END IF;
+        --VAR1 := -5;
+    END LOOP;
+END;
+/
+ 
+--EJERCICIO 15
+DECLARE
+    VAR1 INT := 0;
+BEGIN   
+    WHILE VAR1 <= 20 LOOP
+        DBMS_OUTPUT.PUT_LINE(VAR1);
+        VAR1 := VAR1 + 1;
+    END LOOP;
+END;
+/
+
+--EJERCICIO 18 
+-- DECLARE 
+--     NUMEROPAR INT;
+BEGIN
+    FOR NUMEROPAR IN 1..40 LOOP
+        IF MOD(NUMEROPAR, 2) = 0 THEN
+            DBMS_OUTPUT.PUT_LINE(NUMEROPAR);
+        END IF;
+    END LOOP;
+END;
+/
+
+BEGIN 
+    FOR U IN 1..10 LOOP 
+        DBMS_OUTPUT.PUT_LINE('TABLA DEL ' || U);
+        FOR V IN 1..10 LOOP 
+            DBMS_OUTPUT.PUT_LINE(U || ' * ' || V || ' = ' || U * V);
+        END LOOP;
+    END LOOP;
+END;
+/
+
  
