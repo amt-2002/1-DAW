@@ -1,0 +1,24 @@
+package Tema4.Ej44.Classes;
+
+public class Asesino extends Personaje {
+
+	@Override
+	public String toString() {
+		return "Asesino [getVida()=" + getVida() + ", getNombre()=" + getNombre() + ", getCodigo()=" + getCodigo()
+				+ "]";
+	}
+
+	public Asesino(String nombre, Integer codigo) {
+		super(nombre, codigo);
+		this.vida = 100; 
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void quitarVida() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+}

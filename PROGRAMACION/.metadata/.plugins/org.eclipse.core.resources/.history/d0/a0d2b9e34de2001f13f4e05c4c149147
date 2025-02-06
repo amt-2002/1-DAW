@@ -1,0 +1,19 @@
+package Tema4.Ej44.Classes;
+
+public class Parasito extends Personaje {
+
+	@Override
+	public String toString() {
+		return "Parasito [vida=" + vida + ", nombre=" + nombre + ", codigo=" + codigo + ", getVida()=" + getVida()
+				+ ", getNombre()=" + getNombre() + ", getCodigo()=" + getCodigo() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+
+	public Parasito(Integer vida, String nombre, Integer codigo) {
+		super(vida, nombre, codigo);
+		// TODO Auto-generated constructor stub
+	}
+
+
+
+}

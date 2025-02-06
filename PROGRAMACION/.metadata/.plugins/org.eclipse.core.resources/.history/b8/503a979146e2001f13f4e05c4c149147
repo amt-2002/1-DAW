@@ -1,0 +1,15 @@
+package Tema4.Ej43.Classes;
+
+public class Actor extends Empleado {
+
+	public Actor() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Integer getSueldo() {
+		return 100000;
+	}
+	
+}

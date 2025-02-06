@@ -1,0 +1,26 @@
+package Tema4.Ej44;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Tema4.Ej44.Classes.*;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		Jugador jugador1 = new Jugador();
+		jugador1.setNombre("Angel");
+		
+		EquipoCombate equipo1 = new EquipoCombate();
+		
+		List<Asesino> asesinos = new ArrayList<>();
+		
+		Asesino asesino1 = new Asesino();
+		
+		
+	}
+
+}

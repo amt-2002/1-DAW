@@ -1,0 +1,11 @@
+package Tema4.Ej43;
+
+public class Actor extends Empleados {
+
+	public Actor() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

@@ -1,0 +1,8 @@
+package Tema4.Ej44.Classes;
+
+public class EquipoCombate {
+
+	Integer num_vidas; 
+	
+	
+}

@@ -1,0 +1,16 @@
+package Tema4.Ej43;
+
+public class Guionista extends Empleado {
+
+	public Guionista() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Integer getSueldo() {
+		// TODO Auto-generated method stub
+		return 50000;
+	}
+
+}
