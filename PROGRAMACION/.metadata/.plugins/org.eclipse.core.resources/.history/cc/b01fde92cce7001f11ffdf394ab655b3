@@ -1,0 +1,39 @@
+package Tema4.Ej47;
+
+import Tema4.Ej47.Classes.*;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Cliente cliente = new Cliente("12345678X", "Blas de los Montes");
+		
+		Carrito carrito = new Carrito(cliente);
+		
+		System.out.println(carrito + "\n");
+		
+		Ropa ropa = new Ropa(); 
+		ropa.setPrecio(20.0);
+		ropa.setDescripcion("Poncho");
+		ropa.setTalla("XL");
+		ropa.setColor("Azul");
+		
+		carrito.addArticulo(ropa);
+		carrito.addArticulo(ropa);
+
+		
+		System.out.println(carrito + "\n");
+		
+		Libro libro = new Libro();
+		libro.setPrecio(15.0);
+		libro.setAutor("Así habló Zaratustra");
+		libro.setDescripcion("Nietzsche");
+		
+		carrito.addArticulo(libro);
+		
+		System.out.println(carrito + "\n");
+		
+	}
+
+}

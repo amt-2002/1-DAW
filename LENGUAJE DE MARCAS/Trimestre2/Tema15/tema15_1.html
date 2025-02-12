@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Define el juego de caracteres a usar -->
+    <meta charset="UTF-8" />
+    <!-- Etiqueta para hacer responsive la página, adaptación de escalas-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Establece una descripción de la página -->
+    <meta name="description" content="Curso html Tema 14" />
+    <!-- Establece palabras clave para ser localizada la página por los motores de búsqueda -->
+    <meta name="keywords" content="HTML, CSS, JavaScript, Meta, Responsive" />
+    <!-- Establece el autor del archivo -->
+    <meta name="author" content="Juan Matés" />
+    <title>Tema 15_1</title>
+    <link rel="stylesheet" href="estilos/estilos15_1.css"/>
+  </head>
+  <body>
+    <header>
+      <h1>Noticias 24h</h1>
+    </header>
+
+    <aside>
+      <h2>
+        <ul>
+          <li><a href="#futbol">Sevilla</a></li>
+          <li><a href="#futbol">Betis</a></li>
+          <li><a href="#baloncesto">Madrid</a></li>
+        </ul>
+      </h2>
+    </aside>
+
+    <article>
+      <figure>
+        <img
+          src="https://s.yimg.com/fz/api/res/1.2/pfXZKNsMXFHFpkSGhByk.A--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0yMjA7cT04MDt3PTE2NQ--/https://s.yimg.com/zb/imgv1/314ff28a-c3e1-3e63-9f17-d265f9686377/t_500x300"
+          alt="Lionel Messi"
+        />
+        <!-- Aqui se mete la descripción de la imagen-->
+        <figcaption>Lionel Messi</figcaption>
+      </figure>
+      <p>El Sevilla club de fútbol contrata a Messi</p>
+    </article>
+
+    <h1>Otras noticias</h1>
+
+    <section>
+      <article id="futbol">
+        <details>
+          <summary>Messi</summary>
+          <figure>
+            <img
+              src="https://s.yimg.com/fz/api/res/1.2/pfXZKNsMXFHFpkSGhByk.A--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0yMjA7cT04MDt3PTE2NQ--/https://s.yimg.com/zb/imgv1/314ff28a-c3e1-3e63-9f17-d265f9686377/t_500x300"
+              alt="Lionel Messi"
+            />
+            <!-- Aqui se mete la descripción de la imagen-->
+            <figcaption>Lionel Messi</figcaption>
+          </figure>
+          <p>El Sevilla club de fútbol contrata a Messi</p>
+        </details>
+      </article>
+      <article id="baloncesto">
+        <details>
+          <summary>Golden State Warriors gana el campeonato del NBA</summary>
+          <figure>
+            <img
+              src="https://s.yimg.com/fz/api/res/1.2/pfXZKNsMXFHFpkSGhByk.A--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0yMjA7cT04MDt3PTE2NQ--/https://s.yimg.com/zb/imgv1/314ff28a-c3e1-3e63-9f17-d265f9686377/t_500x300"
+              alt=""
+            />
+            <figcaption>Golden State Warrios</figcaption>
+          </figure>
+          <p>En el ultimo partido este es el mejor equipo del mundo</p>
+        </details>
+      </article>
+    </section>
+
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, footer {
+    background-color: #4f6888;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    padding: 30px;
+}
+
+nav {
+    width: 30%;
+    height: 300px;
+    background-color: #a8d4ee;
+    padding: 20px;
+    float: left;
+}
+nav ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+article {
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px;
+    float: left;
+}
+
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}

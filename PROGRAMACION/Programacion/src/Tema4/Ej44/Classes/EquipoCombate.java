@@ -5,45 +5,24 @@ import java.util.List;
 
 public class EquipoCombate {
 
-	private Integer num_vidas;
+	private Integer num_vidas = 0;
 	private List<Personaje> personajes = new ArrayList<>();
 
 	public List<Personaje> getPersonajes() {
 		return personajes;
 	}
 
-	public void setPersonajes(List<Personaje> personajes) {
-		this.num_vidas = 0;
-		
-		Boolean encontradoIguales = false; 
-		
-		for( int i = 0; i < personajes.size(); i++) {
-			
-			if (encontradoIguales) {
-				break;
-			}
-			
-			for( int x = i+1; x < personajes.size(); x++) {
-				if (personajes.get(i).equals(personajes.get(x))) {
-					System.err.println("NO PUEDEN HABER DOS PERSONAJES IGUALES");
-					encontradoIguales = true;
-					break;
-				}
-			}
-		}
-		
-		if (!encontradoIguales) {
-			if (personajes.size() <= 5) {
-				for (Personaje personaje : personajes) {
-					this.num_vidas += personaje.getVida();
-				}
-				this.personajes = personajes;
-			} else  {
+	public void añadirPersonaje(Personaje personaje) {
+		if (!personajes.contains(personaje)) {
+			if (personajes.size() < 5) {
+				personajes.add(personaje);
+				this.num_vidas += personaje.getVida();
+			} else {
 				System.err.println("SOLO PUEDE HABER 5 PERSONAJES EN EL EQUIPO");
 			}
+		} else {
+			System.err.println("NO PUEDE HABER DOS PERSONAJES IGUALES");
 		}
-		
-
 	}
 
 	public Integer getNum_vidas() {
@@ -57,12 +36,10 @@ public class EquipoCombate {
 	public EquipoCombate() {
 		super();
 	}
-	
 
 	@Override
 	public String toString() {
 		return "EquipoCombate [num_vidas=" + this.num_vidas + ", personajes=" + this.personajes + "]";
 	}
-
 
 }

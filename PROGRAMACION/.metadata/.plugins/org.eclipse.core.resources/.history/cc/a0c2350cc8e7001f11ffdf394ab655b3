@@ -1,0 +1,14 @@
+package Tema4.Ej47;
+
+import Tema4.Ej47.Classes.*;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Cliente cliente = new Cliente("12345678X", "Blas de los Montes");
+
+	}
+
+}
