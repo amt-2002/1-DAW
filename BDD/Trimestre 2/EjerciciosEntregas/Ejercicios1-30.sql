@@ -109,7 +109,7 @@ SELECT TO_CHAR(TO_DATE('01012005', 'DDMMYYYY'), 'DD "DE" MONTH "DE" YYYY') "FECH
 
 --27. Calcular el número de días vividos hasta hoy por una persona nacida el día 3 de julio de 1970.
 
-SELECT ROUND(ABS(TO_DATE('3/7/1970', 'DD/MM/YYYY') - SYSDATE), 2) || ' DIAS' "DIAS" FROM DUAL;
+SELECT ROUND(ABS(TO_DATE('3/7/1970', 'DD/MM/YYYY') - SYSDATE)) || ' DIAS' "DIAS" FROM DUAL;
 
 --28. Calcular el número de segundos transcurridos desde la última medianoche (máscara 'sssss' en to_char).
 
