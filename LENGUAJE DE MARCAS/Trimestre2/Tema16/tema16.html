@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tema16</title>
+  </head>
+  <body>
+    <h2>Campos de entrada de texto</h2>
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+      <label for="idNombre">Nombre:</label>
+      <br />
+      <input type="text" name="idNombre" id="idNombre" />
+      <br />
+      <label for="idApellido">Apellido:</label>
+      <br />
+      <input type="text" name="idApellido" id="idApellido" />
+      <br />
+      <br />
+      <label for="">Selecciona tu especialidad:</label>
+      <br />
+      <input type="radio" name="idRadio" id="idDaw" value="daw" />
+      <label for="idDaw">DAW</label>
+      <br />
+      <input type="radio" name="idRadio" id="idDam" value="dam" />
+      <label for="idDam">DAM</label>
+      <br />
+      <input type="radio" name="idRadio" id="idAsir" value="asir" />
+      <label for="idAsir">ASIR</label>
+      <br />
+      <br />
+      <label>Selecciona las opciones que correspondan:</label>
+      <br />
+      <input type="checkbox" name="idCarnet" id="idCarnet" />
+      <label for="idCarnet">Tengo carnet de conducir</label>
+      <br />
+      <input type="checkbox" name="idVeh" id="idVeh" />
+      <label for="idVeh">Tengo vehiculo propio</label>
+      <br />
+      <input type="checkbox" name="idLeng" id="idLeng" />
+      <label for="idLeng">Domino el ingles</label>
+      <br />
+      <br />
+      <button type="submit">Enviar</button>
+    </form>
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+      <h2>CAMPOS</h2>
+      <label for="idNombre">Nombre:</label>
+      <br />
+      <input type="text" name="idNombre" id="idNombre" value="Angel" />
+      <br />
+      <label for="idApellido">Apellido:</label>
+      <br />
+      <input type="text" name="idApellido" id="idApellido" value="Melendez" />
+      <br />
+      <br />
+      <button type="submit">Enviar</button>
+      <br>
+      <br>
+    </form>
+    <h2>FORMULARIO CON LISTA DESPEGABLE</h2>
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+        <select name="idLista" id="idLista">
+            <option value="lm">Lenguaje de marcas</option>
+            <option value="pr">Programacion</option>
+            <option value="so">Sistemas operativos</option>
+            <option value="en" selected>Entornos</option>
+        </select>
+        <br>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+  </body>
+</html>

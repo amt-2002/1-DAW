@@ -1,8 +1,0 @@
-package Tema4.Ej44.Classes;
-
-public class Equipo {
-
-	Integer num_vidas; 
-	
-	
-}

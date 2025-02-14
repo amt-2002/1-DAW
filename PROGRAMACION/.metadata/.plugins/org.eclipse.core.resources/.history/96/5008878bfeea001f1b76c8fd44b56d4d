@@ -3,23 +3,21 @@ package Tema4.Ej47.Classes;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class Carrito {
 
 	private LocalDate fechaCreacion;
 	private LocalDate fechaActualizacion;
 	private Cliente cliente;
-	private Set<Articulo> articulos;
+	private List<Articulo> articulos;
 	
 	public Carrito(Cliente clienteRecibido) {
 		super();
 		this.cliente = clienteRecibido; 
 		this.fechaCreacion = LocalDate.now();
 		this.fechaActualizacion = fechaCreacion;
-		this.articulos = new HashSet<>();
+		this.articulos = new ArrayList<>();
 	}
 
 	public LocalDate getFechaCreacion() {
@@ -36,7 +34,7 @@ public class Carrito {
 		return cliente;
 	}
 
-	public Set<Articulo> getArticulos() {
+	public List<Articulo> getArticulos() {
 		return this.articulos;
 	}
 	
@@ -47,8 +45,8 @@ public class Carrito {
 	public Double getTotal() {
 		if (this.getArticulos().size() <= 0) return 0.0;
 		Double precioTotal = 0.0;
-		for (Articulo articulo : articulos) {
-			precioTotal += articulo.getPrecio();
+		for (int i = 0; i < this.articulos.size(); i++) {
+			precioTotal += this.articulos.get(i).getPrecio();
 		}
 		return precioTotal;
 		
@@ -72,8 +70,8 @@ public class Carrito {
 		this.articulos.add(articulo);
 	}
 	
-	public void borrarArticulo(Articulo articulo) {
-		this.articulos.remove(articulo); 
+	public void borrarArticulo(int index) {
+		this.articulos.remove(index); 
 	}
 	
 	public void vaciarCesta() {

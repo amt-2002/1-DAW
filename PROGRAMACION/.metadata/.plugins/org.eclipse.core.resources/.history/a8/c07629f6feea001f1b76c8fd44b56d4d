@@ -34,7 +34,7 @@ public class App {
 		
 		System.out.println(carrito + "\n");
 		
-		carrito.borrarArticulo(libro);
+		carrito.borrarArticulo(1);
 		
 		System.out.println(carrito + "\n");
 		
