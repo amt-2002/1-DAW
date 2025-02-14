@@ -77,4 +77,6 @@ SELECT JOB, TO_CHAR(ROUND(AVG(SAL),2),'99999L')"MEDIA" FROM EMP GROUP BY JOB;
 
 --50. Cuántos días de vacaciones correspondieron a cada empleado el primer año de trabajo (contando 1 día por semana entera trabajada).
 
-SELECT ENAME, FLOOR((SYSDATE - HIREDATE) / 7) "Días de Vacaciones" FROM EMP;
+-- SELECT ENAME, ROUND((MONTHS_BETWEEN(SYSDATE, HIREDATE) / 12) * 48, 0) "DÍAS DE VACACIONES" FROM EMP;
+ 
+SELECT ENAME, TO_CHAR(HIREDATE,'YYYY') "Año", ROUND((MONTHS_BETWEEN(TO_DATE(ADD_MONTHS(HIREDATE, 12)), HIREDATE)/12)*48,0) "Días de vacaciones" FROM EMP;
