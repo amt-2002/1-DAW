@@ -1,0 +1,13 @@
+package Tema4.Ej2.Clases;
+
+public class Movil extends Telefono {
+	private String posiGPS;
+
+	public Movil(Integer tel, String gps) {
+		super(tel);
+		this.setEnLlamada(false);
+		this.posiGPS = gps;
+	} 
+	
+	
+}

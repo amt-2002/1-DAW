@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h2>Formulario con distintos tipos de campos</h2>
+    <form action="https://www.w3schools.com/action_page.php" target="_blank" method="post">
+        <label for="nombre" id="nombre">Nombre:</label> <br>
+        <input type="text" id="nombre" name="nombre"> <br> <br>
+        <label for="idpwd">Contraseña:</label> <br>
+        <input type="password" id="idpwd" name="idpwd"> <br> <br>
+ 
+        <h3>Lenguajes</h3>
+        <input type="radio" id="id1" name="name1" value="html" checked> <label for="id1"> html</label>  <br>
+        <input type="radio" id="id2" name="name1" value="css" disabled> <label for="id2"> css</label> <br>
+        <input type="radio" id="id3" name="name1" value="javascript"> <label for="id3"> javascript</label> <br>
+        <br>
+ 
+        <h3>Colores</h3>
+        <input type="checkbox" id="id1" name="name1" value="1" checked> <label for="id1">azul</label> <br>
+        <input type="checkbox" id="id2" name="name2" value="2" disabled> <label for="id2">rojo</label> <br>
+        <input type="checkbox" id="id3" name="name3" value="3"> <label for="id3">verde</label> <br>
+        <br>
+ 
+        <h3>New</h3>
+        <label for="color">Elije tu color favorito</label>
+        <input type="color" id="id1" name="color" value="color"> <br> <br>
+        <label for="date"> Fecha de nacimiento</label>
+        <input type="date" id="id1" name="date" value="date"> <br> <br>
+        <label for="date"> Fecha y hora de reunion</label>
+        <input type="datetime-local" id="id1" name="date" value="date"> <br> <br>
+        <label for="">Dime tu correo </label>
+        <input type="email"> <br> <br>
+        <label for="">Imagen con boton</label> <br>
+        <input type="image" src="https://cadenaser.com/resizer/v2/JBYX4ZG3K5HJVOXL6OKHTBZF3Q.jpg?auth=614735998d136564e733b7146800ff5fc8435246c5ef60f7033860307d509162" height="30%" width="30%"> <br> <br>
+        <label for="">Sube un archivo</label> <br>
+        <input type="file" name="" id=""> <br> <br>
+        <label for="">Campo Oculto</label>
+        <input type="hidden" name="" id=""> <br> <br>
+        <label for="">Mes y  año</label>
+        <input type="month" name="" id=""> <br> <br>
+        <label for="">Texto pero solo puede ser con numeros</label>
+        <input type="number" name="" id=""> <br> <br>
+ 
+        <h3>Botones</h3>
+        <input type="button" id="id1" name="pulsame" value="pulsame" onclick="alert('Hola, bienvenido!')">
+        <input type="reset" value="resetear" name="" id="">
+        <input type="submit" value="enviar" class="form-submit-buttom" >
+    </form>
+</body>
+</html>

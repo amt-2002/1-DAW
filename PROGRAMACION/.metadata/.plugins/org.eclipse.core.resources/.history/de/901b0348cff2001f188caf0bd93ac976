@@ -1,0 +1,16 @@
+package Tema4.Ej54;
+
+import Tema4.Ej54.Classes.*;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		CuentaAhorro cuenta1 = new CuentaAhorro("34567891234567891234"); 
+		
+		System.out.println(cuenta1.getDineroCuenta());
+		
+	}
+
+}

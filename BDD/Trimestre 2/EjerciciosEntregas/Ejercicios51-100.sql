@@ -200,7 +200,7 @@ SELECT ENAME, NVL(TO_CHAR(COMM), 'Sin comisión') FROM EMP;
 --97. Listar nombre de los empleados, y una tira de asteriscos, de forma que haya un asterisco por cada 1000$ (redondeada) que gana el empleado. Titula la columna 'Empleado y su salario'. Ordenar esta
 --columna de forma que los que m�s ganan aparezcan primero. Los nombres deben quedar ajustados a la longitud del nombre más largo. Ej.: "KING..:  ****"
 
-SELECT ENAME || RPAD('.', LENGTH((SELECT MAX(ENAME) FROM EMP)), '.') || ':' || RPAD('*', ROUND(SAL / 1000), '*') "Empleado y su salario" FROM EMP ORDER BY SAL DESC;
+SELECT RPAD(ENAME, ((SELECT MAX(LENGTH(ENAME)) FROM EMP)), '.') || ':' || RPAD('*', ROUND(SAL / 1000), '*') "Empleado y su salario" FROM EMP ORDER BY SAL DESC;
 
 --98. Listar los distintos nombres de puestos de los empleados, de forma que : PRESIDENT se traduzca por A, MANAGER por B, ANALYST por C, CLERK por D y el resto por E.
 

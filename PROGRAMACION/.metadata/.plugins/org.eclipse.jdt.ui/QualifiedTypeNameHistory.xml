@@ -7,4 +7,10 @@
     <fullyQualifiedTypeName name="java.util.concurrent.CopyOnWriteArrayList"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Timer"/>
+    <fullyQualifiedTypeName name="Tema4.Ej2.Clases.Movil"/>
+    <fullyQualifiedTypeName name="Tema4.Ej2.Clases.Fijo"/>
+    <fullyQualifiedTypeName name="Tema4.Ej4.Clases.Libreria"/>
+    <fullyQualifiedTypeName name="Tema4.Ej4.Clases.LibroNormal"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.Month"/>
 </qualifiedTypeNameHistroy>
