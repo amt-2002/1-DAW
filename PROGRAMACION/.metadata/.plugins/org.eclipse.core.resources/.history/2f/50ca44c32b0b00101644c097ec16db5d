@@ -1,0 +1,24 @@
+package Tema4.Ej59;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Geografia paises = new Geografia();
+		
+		paises.agregarPais("Egipto", "El Cairo");
+		paises.agregarPais("Suiza", "Berna");
+		paises.agregarPais("Austria", "Praga");
+		paises.agregarPais("Hungría", "Budapest");
+		paises.agregarPais("Austria", "Viena");
+		paises.agregarPais("Brasil", "Brasilia");
+		
+		
+		paises.imprimirPaises();
+
+		paises.calcularLongitudMediaPaises();
+
+	}
+
+}

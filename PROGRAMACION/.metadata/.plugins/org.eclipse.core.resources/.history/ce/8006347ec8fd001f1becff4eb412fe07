@@ -1,0 +1,40 @@
+package ExamenAAngelMelendez.Clases;
+
+import java.math.BigDecimal;
+
+public class Pollo extends Animal {
+
+	public static final BigDecimal PRECIOVENTAKG = BigDecimal.valueOf(1.5);
+	public static final BigDecimal PESOVENTAMIN = BigDecimal.valueOf(5);
+	
+
+	public Pollo(Integer nRegistro) {
+		super(nRegistro);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public BigDecimal getPesoMinVenta() {
+		// TODO Auto-generated method stub
+		return Pollo.PESOVENTAMIN;
+	}
+
+	@Override
+	public BigDecimal getPrecioVentaKg() {
+		// TODO Auto-generated method stub
+		return Pollo.PRECIOVENTAKG;
+	}
+
+	@Override
+	public Boolean sePuedeVender() {
+		Double pesoCon = this.getPeso().doubleValue();
+		Double pesoVentaCon = Pollo.PESOVENTAMIN.doubleValue();
+		
+		if (pesoCon >= pesoVentaCon) {
+			return true;
+		}
+
+		return false;
+	}
+
+}

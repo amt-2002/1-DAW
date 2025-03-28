@@ -1,0 +1,51 @@
+package ExamenAAngelMelendez.Clases;
+
+import java.math.BigDecimal;
+
+public class Cerdo extends Animal {
+
+	private String raza; 
+	
+	public static final BigDecimal PRECIOVENTAKG = BigDecimal.valueOf(4.5);
+	public static final BigDecimal PESOVENTAMIN = BigDecimal.valueOf(100);
+	
+	
+	public Cerdo(Integer nRegistro) {
+		super(nRegistro);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	public String getRaza() {
+		return raza;
+	}
+
+	public void setRaza(String raza) {
+		this.raza = raza;
+	}
+
+
+	@Override
+	public BigDecimal getPesoMinVenta() {
+		return Cerdo.PESOVENTAMIN; 
+	}
+
+
+	@Override
+	public BigDecimal getPrecioVentaKg() {
+		return Cerdo.PRECIOVENTAKG;
+
+	}
+
+
+	@Override
+	public Boolean sePuedeVender() {
+		
+		if (this.getPeso().compareTo(Cerdo.PESOVENTAMIN) == 1 || this.getPeso().compareTo(Cerdo.PESOVENTAMIN) == 0) {
+			return true;
+		}
+
+		return false; 
+	}
+
+}

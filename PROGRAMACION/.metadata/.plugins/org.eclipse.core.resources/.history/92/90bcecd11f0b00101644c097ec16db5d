@@ -1,0 +1,40 @@
+package Tema4.Ej57;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sca = new Scanner(System.in);
+	
+		Map<String, String> palabras = new HashMap<>();
+		String palabraEscrita;
+		
+		do {
+			System.out.println("Escribe una palabra");
+			palabraEscrita = sca.nextLine();
+			palabras.put(palabraEscrita.substring(0, 1), palabraEscrita);
+		}
+		while (!palabraEscrita.equals("FIN"));
+		
+		
+		for (Map.Entry<String, String> entry : palabras.entrySet()) {
+			String key = entry.getKey();
+			String val = entry.getValue();
+			
+			System.out.println(key + val);
+			
+		}
+		
+		sca.close();
+
+	}
+
+}

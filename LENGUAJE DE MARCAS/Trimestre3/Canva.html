@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang ="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tema 19</title>
+        <link rel="stylesheet" href="estilos/tema_19.css">
+     
+    </head>
+    <body>
+        <h2>Ejemplo canva</h2>
+        <canvas id="myCanvas" width="200" height="100" style="border: 1px solid black;"></canvas></canvas>
+        <canvas id="myCanvas2" width="200" height="100" style="border: 1px solid black;"></canvas></canvas> <br>
+        <canvas id="myCanvas3" width="600" height="300" style="border: 1px solid black;"></canvas></canvas> <br>
+        <canvas id="myCanvas4" width="200" height="100" style="border: 1px solid black;"></canvas></canvas> <br>
+        <canvas id="myCanvas5" width="200" height="100" style="border: 1px solid black;"></canvas></canvas> <br>
+        <canvas id="myCanvas6" width="300" height="200"></canvas></canvas> <br>
+   
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+
+            
+            //  Dibujo de lineas
+
+            ctx.strokeStyle = "blue";
+            ctx.lineWidth = 5;
+ 
+            ctx.moveTo(0,0);
+            ctx.lineTo(200,100);
+            ctx.stroke();
+ 
+            ctx.beginPath();
+            ctx.strokeStyle = "red";
+            ctx.lineWidth = 5;
+ 
+            ctx.moveTo(200,0);
+            ctx.lineTo(0,100);
+            ctx.stroke();
+ 
+            ctx.beginPath();
+            ctx.strokeStyle = "green";
+            ctx.lineWidth = 5;
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+           
+
+            //  Dibujo de texto
+
+            var c2 = document.getElementById("myCanvas2");
+            var ctx2 = c2.getContext("2d");
+
+            ctx2.font = "30px Arial";
+            ctx2.fillStyle = "red";
+            ctx2.fillText("Hellow World", 10, 50);
+            ctx2.strokeStyle = "blue";
+            ctx2.lineWidth = 1;
+            ctx2.strokeText("Hellow World", 10, 50);
+
+            
+            var c3 = document.getElementById("myCanvas3");
+            var ctx3 = c3.getContext("2d");
+            ctx3.font = "bold 100px Arial";
+            ctx3.fillStyle = "green";
+            ctx3.fillText("HOLA", 160, 170);
+            ctx3.strokeStyle = "blue";
+            ctx3.lineWidth = 1;
+            ctx3.strokeText("HOLA", 160, 170);
+
+
+            //  Dibujo de degradados
+
+            var c4 = document.getElementById("myCanvas4");
+            var ctx4 = c4.getContext("2d");
+
+            var gdr = ctx4.createLinearGradient(0, 0, 200, 0);
+            gdr.addColorStop(0, "red");
+            gdr.addColorStop(1, "white");
+
+            ctx4.fillStyle = gdr;
+            ctx4.fillRect(10, 10, 190, 80);
+
+
+            var c5 = document.getElementById("myCanvas5");
+            var ctx5 = c5.getContext("2d");
+
+            var gdr = ctx5.createRadialGradient(95, 50, 10, 95, 50, 40);
+
+            gdr.addColorStop(0, "red");
+            gdr.addColorStop(1, "white");
+
+            ctx5.fillStyle = gdr;
+            ctx5.fillRect(10, 10, 190, 80);
+
+            
+            var c6 = document.getElementById("myCanvas6");
+            var ctx6 = c6.getContext("2d");
+
+            // Dibujo de la bandera de España
+
+            ctx6.fillStyle = "red";
+            ctx6.fillRect(0, 0, 300, 60);
+
+            ctx6.fillStyle = "yellow";
+            ctx6.fillRect(0, 60, 300, 80);
+
+            ctx6.fillStyle = "red";
+            ctx6.fillRect(0, 140, 300, 60);
+           
+           
+        </script>
+
+    </body>
+</html>
