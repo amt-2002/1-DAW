@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>INCORPORACION DE VIDEO EN HTML</h2>
+    <video id= "myVideo" src="https://www.w3schools.com/html/mov_bbb.mp4" controls autoplay>
+        <track src="media/subtitulos-es.vtt" kind="subtitles" srclang="es" label="Español" default></track>
+        <p>
+            Tu navegador no soporta el video. Aqui esta el enlace 
+            <a href="https://www.w3schools.com/html/mov_bbb.mp4">enlace del video</a>
+        </p> 
+    </video>
+</body>
+<script>
+    function myFunction() {
+        // let vid = document.getElementById("myVideo");
+
+        // let textTrack = vid.addTextTrack("captions", "Español", "es");
+        // textTrack.mode = "showing";
+
+        // let cue = new VTTCue(1, 4, "UNA MARIPOSA VA VOLANDOO.....");
+        // textTrack.addCue(cue);
+        // cue = new VTTCue(5, 6, "CUANDO SE POSA EN EL SUELO.....");
+        // textTrack.addCue(cue);
+        // cue = new VTTCue(7, 10, "Y MANZANAZO");
+        // textTrack.addCue(cue);
+
+
+        // En ingles 
+
+        let vid = document.getElementById("myVideo");
+        let textTrack = vid.addTextTrack("captions", "English", "en");
+        textTrack.mode = "showing";
+        let cue = new VTTCue(1, 4, "A BUTTERFLY IS FLYING.....");
+        textTrack.addCue(cue);
+        cue = new VTTCue(5, 6, "WHEN IT LANDS ON THE GROUND.....");
+        textTrack.addCue(cue);
+        cue = new VTTCue(7, 10, "AND APPLE");
+        textTrack.addCue(cue);
+
+    }
+    // myFunction();
+</script>
+</html>

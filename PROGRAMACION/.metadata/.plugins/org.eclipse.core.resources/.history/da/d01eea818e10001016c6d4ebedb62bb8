@@ -1,0 +1,14 @@
+package Tema5.Ej6;
+
+public class ParametroIncorrectoException extends Exception {
+
+	private static final long serialVersionUID = 2280150819041066020L;
+
+	public ParametroIncorrectoException() {
+		super();
+	}
+	
+	
+	
+
+}

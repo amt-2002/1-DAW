@@ -1,0 +1,17 @@
+package Tema5.Ej6;
+
+import java.math.BigDecimal;
+
+public class Persona {
+	
+	private String genero; 
+	private BigDecimal altura;
+	
+	
+	public Persona() {
+		super();
+		this.altura = BigDecimal.ZERO;
+	} 
+	
+
+}

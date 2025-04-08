@@ -1,0 +1,9 @@
+package Tema6.ejPrueba.servicios;
+
+public class OpenConnection {
+
+	public OpenConnection() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

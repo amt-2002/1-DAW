@@ -1,0 +1,17 @@
+package Tema6.EjPrueba.app;
+
+import Tema6.EjPrueba.services.OpenConnection;
+import Tema6.EjPrueba.services.PersonasService;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		PersonasService pers = new PersonasService();
+		
+		System.out.println(pers);
+
+	}
+
+}

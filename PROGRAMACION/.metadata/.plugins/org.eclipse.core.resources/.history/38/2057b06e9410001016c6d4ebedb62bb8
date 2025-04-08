@@ -1,0 +1,18 @@
+package Tema5.Ej7;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Sociedad {
+	
+	Set<Persona> personas;
+
+	public Sociedad() {
+		super();
+		this.personas = new HashSet<>();
+		
+	} 
+	
+	
+
+}

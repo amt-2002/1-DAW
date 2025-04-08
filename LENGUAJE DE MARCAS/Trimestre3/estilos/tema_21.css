@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+h2 {
+    color: #4d77ca;
+    text-align: center;
+}
+
+
+video::cue {
+    background-color: #4d77ca;
+    color: white;
+    font-size: 1.2em;
+    padding: 0.2em;
+}

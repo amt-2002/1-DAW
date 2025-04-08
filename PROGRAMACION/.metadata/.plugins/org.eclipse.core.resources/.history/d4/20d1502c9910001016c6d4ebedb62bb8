@@ -1,0 +1,102 @@
+package Tema5.Ej7;
+
+import java.math.BigDecimal;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Sociedad {
+	
+	Set<Persona> personas;
+
+	public Sociedad() {
+		super();
+		this.personas = new HashSet<>();
+		
+	} 
+	
+	
+	public void addPersona(String gen, BigDecimal altu) {
+		
+		Persona pers = new Persona();
+		
+		try {
+			pers.setAltura(altu);
+		} catch (ParametroIncorrectoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		try {
+			pers.setGenero(gen);
+		} catch (ParametroIncorrectoException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public BigDecimal calcularAlturaMediaHombres() throws ListaVaciaException {
+		
+
+		BigDecimal suma = BigDecimal.ZERO;
+		Boolean genEncontrado = false;
+		
+		for (Persona persona : personas) {
+			if (persona.getGenero().equals("H")) {
+				suma = suma.add(persona.getAltura());
+				genEncontrado = true;
+			}
+		}
+		
+		if (!genEncontrado) {
+			throw new ListaVaciaException("No hay personas hombres en la lista");
+		}
+		
+		return suma;
+		
+	}
+	
+	
+	public BigDecimal calcularAlturaMediaMujeres() throws ListaVaciaException {
+		
+
+		BigDecimal suma = BigDecimal.ZERO;
+		Boolean genEncontrado = false;
+		
+		for (Persona persona : personas) {
+			if (persona.getGenero().equals("M")) {
+				suma = suma.add(persona.getAltura());
+				genEncontrado = true;
+			}
+		}
+		
+		if (!genEncontrado) {
+			throw new ListaVaciaException("No hay personas hombres en la lista");
+		}
+		
+		return suma;
+		
+	}
+	
+	
+	public BigDecimal calcularAlturaMedia() throws ListaVaciaException {
+		
+		if (personas.isEmpty()) {
+			throw new ListaVaciaException("No hay personas hombres en la lista");
+		}
+		
+		BigDecimal suma = BigDecimal.ZERO;
+		
+		for (Persona persona : personas) {
+			suma = suma.add(persona.getAltura());
+		}
+		
+
+		return suma;
+		
+	}
+	
+	
+
+}

@@ -1,0 +1,14 @@
+package Tema6.EjPrueba.app;
+
+import Tema6.EjPrueba.services.OpenConnection;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		OpenConnection openConn;
+
+	}
+
+}

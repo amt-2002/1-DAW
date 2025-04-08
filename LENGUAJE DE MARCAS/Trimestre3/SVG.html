@@ -13,9 +13,47 @@
         <circle cx="50" cy="50" r="40" stroke = "green" fill = "yellow" stroke-width = "4" /> 
     </svg> 
 
+    <br><br>
+
     <svg width="300" height="120" border="1" style="border: 1px solid black;">
         <rect x = "10" y = "10" width = "200" height = "100" stroke = "red" fill = "blue" stroke-width = "6" />
     </svg> 
 
+    <br><br>
+
+
+    <svg width="130" height="500">
+        <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:yellow" />
+                <stop offset="100%" style="stop-color:red" />
+            </linearGradient>
+        </defs>
+        <ellipse cx="100" cy="70" rx="85" ry="55" stroke="black" fill="url(#grad1)" />
+        <text fill = #ffffff font-size = "45" font-family = "Verdana" x = "50" y = "86">CEU</text>
+    </svg>
+
+    <br><br>
+
+    <svg width="600" height="400">
+        <defs>
+            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="0%" y2="0%">
+                <stop offset="0%" style="stop-color:rgb(0, 26, 255)" />
+                <stop offset="100%" style="stop-color:rgb(0, 110, 255)" />
+            </linearGradient>
+            <linearGradient id="whiteGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:rgb(245, 245, 245)" />
+                <stop offset="1000%" style="stop-color:rgb(224, 224, 224)" />
+            </linearGradient>
+            <linearGradient id="redGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color:rgb(238, 51, 51)" />
+                <stop offset="100%" style="stop-color:darkred" />
+            </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="100" height="200" fill="url(#blueGradient)" />
+        <rect x="100" y="0" width="100" height="200" fill="url(#whiteGradient)" />
+        <rect x="200" y="0" width="100" height="200" fill="url(#redGradient)" />
+        <text x="150" y= "110" fill="black" font-size="30" font-family="Verdana" text-anchor="middle">Francia</text>
+    </svg>
 </body>
 </html>
