@@ -1,0 +1,9 @@
+package Tema6.EjPrueba.prueba;
+
+public class hola {
+
+	public hola() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

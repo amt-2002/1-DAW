@@ -7,15 +7,35 @@
 </head>
 <body>
     <h2>INCORPORACION DE VIDEO EN HTML</h2>
-    <video id= "myVideo" src="https://www.w3schools.com/html/mov_bbb.mp4" controls autoplay>
+    <video id= "myVideo" src="https://www.w3schools.com/html/mov_bbb.mp4" controls autoplay loop>
         <track src="media/subtitulos-es.vtt" kind="subtitles" srclang="es" label="Español" default></track>
         <p>
             Tu navegador no soporta el video. Aqui esta el enlace 
             <a href="https://www.w3schools.com/html/mov_bbb.mp4">enlace del video</a>
         </p> 
     </video>
+
+    <br>
+
+
+    <h4>CONTROLES</h4>
+    <button onclick="playPause()">Reproducir/Parar</button>
+    <button onclick="makeBig()">Aumentar</button>
+    <button onclick="makeSmall()">Disminuir</button>
+    <button onclick="makeNormal()">Normal</button>
+    <br><br>
+    <button onclick="retroceder()">Retroceder</button>
+    <button onclick="avanzar()">Avanzar</button>
+    <button onclick="fullScreen()">Pantalla Completa</button>
+    <br><br>
+    <button onclick="velLenta()">Lenta</button>
+    <button onclick="velNormal()">Normal</button>
+    <button onclick="velRapida()">Rapida</button>
+    <button onclick="velSuperRapida()">SuperRapida</button>
+
 </body>
 <script>
+    let vid = document.getElementById("myVideo");
     function myFunction() {
         // let vid = document.getElementById("myVideo");
 
@@ -32,7 +52,6 @@
 
         // En ingles 
 
-        let vid = document.getElementById("myVideo");
         let textTrack = vid.addTextTrack("captions", "English", "en");
         textTrack.mode = "showing";
         let cue = new VTTCue(1, 4, "A BUTTERFLY IS FLYING.....");
@@ -41,8 +60,57 @@
         textTrack.addCue(cue);
         cue = new VTTCue(7, 10, "AND APPLE");
         textTrack.addCue(cue);
-
     }
+
+    function playPause() {
+        if (vid.paused)
+        vid.play();
+        else
+        vid.pause();
+    }
+
+    function makeBig() {
+        vid.width = 560;
+    }
+
+    function makeSmall() {
+        vid.width = 320;
+    }
+
+    function makeNormal() {
+        vid.width = 420;
+    }
+
+    function retroceder() {
+        vid.currentTime -= 1;
+    }
+
+    function avanzar() {
+        vid.currentTime += 1;
+    }
+
+    function fullScreen() {
+        vid.requestFullscreen();
+    }
+
+    function velLenta () {
+        vid.playbackRate = 0.5;
+    }
+
+    function velNormal () {
+        vid.playbackRate = 1;
+    }
+
+    function velRapida () {
+        vid.playbackRate = 2;
+    }
+
+    function velSuperRapida () {
+        vid.playbackRate = 3;
+    }
+
+
+
     // myFunction();
 </script>
 </html>

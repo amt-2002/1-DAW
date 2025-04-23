@@ -2,9 +2,7 @@ package Tema6.EjPrueba.app;
 
 import java.util.Scanner;
 
-
 import Tema6.EjPrueba.services.*;
-import Tema6.EjPrueba.modelo.*;
 
 public class App {
 
