@@ -1,9 +1,0 @@
-package Tema6.EjPrueba.services;
-
-public class Persona {
-
-	public Persona() {
-		// TODO Auto-generated constructor stub
-	}
-
-}

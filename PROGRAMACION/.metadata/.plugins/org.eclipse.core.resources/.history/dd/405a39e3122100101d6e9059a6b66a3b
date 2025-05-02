@@ -1,0 +1,48 @@
+package Tema6.EjPrueba.services;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import Tema6.Ej3.modelo.*;
+
+public class PersonasService {
+
+	private OpenConnection openConn;
+
+	public PersonasService() {
+		// TODO Auto-generated constructor stub
+		openConn = new OpenConnection();		
+		System.out.println("Conexion establecida");
+	}
+	
+	public Persona consultarPersona(String dniRec) {
+		
+		String sql = "SELECT * FROM PERSONAS";
+	
+		try(Connection conn = openConn.getNewConnection() ;
+			Statement stmt = conn.createStatement())
+		{
+			
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				String dni = rs.getString("DNI");
+				
+				if (dni.equals(dniRec)) {
+					Persona pers = new Persona();
+					pers.setDni(dni);
+					return pers;
+				}
+				
+			}
+		}
+		catch(SQLException e) {
+			System.err.println("Error accendiendo a BDD");
+		}
+		
+		return null;
+	}
+
+
+}

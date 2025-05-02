@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/tema_22.css">
+</head>
+<body>
+    <h2>Incorporacion de audio en html</h2>
+    <div style="text-align: center;">
+        <audio id="myAudio" controls>
+            <source  src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <br>
+        <h4>CONTROLES</h4>
+        <button onclick="playAudio()">Reproducir</button>
+        <button onclick="pauseAudio()">Pausar</button>
+        <button onclick="changeVolume(0.1)">Subir volumen</button>
+        <button onclick="changeVolume(-0.1)">Bajar volumen</button>
+        <button onclick="toggleMute()">Mutear</button>
+        <button onclick="seek(-5)">Retroceder 5s</button>
+        <button onclick="seek(5)">Avanzar 5s</button>
+        <br>
+        <h4>CONTROLES DE GRABACION</h4>
+        <button onclick="startRecording()">Iniciar grabacion</button>
+        <button onclick="stopRecording()">Detener grabacion</button>
+    </div>
+</body>
+<script>
+    const audio = document.getElementById('myAudio');
+
+    function playAudio() {
+        audio.play();
+    }
+
+    function pauseAudio() {
+        audio.pause();
+    }
+
+    function changeVolume(vol) {
+        let newVolume = Math.min(1, Math.max(audio.volume + vol, 0));
+        audio.volume = newVolume; 
+    }
+
+    function toggleMute() {
+        audio.muted = !audio.muted;
+    }
+
+    function seek(seconds) {
+        audio.currentTime = Math.max(0, audio.currentTime + seconds);
+    }
+
+    let mediaRecorder;
+    let audioChunks = [];
+    let audioBlob;
+
+    async function startRecording() {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.ondataavailable = event => audioChunks.push(event.data); 
+
+        mediaRecorder.onstop = () => {
+            audioBlob = new Blob(audioChunks, { type: 'audio/mp3' });
+            const audioUrl = URL.createObjectURL(audioBlob);
+            document.getElementById('myAudio').src = audioUrl;
+            audioChunks = []; 
+        };
+
+        mediaRecorder.start();
+    }
+
+    function stopRecording() {
+        mediaRecorder.stop();
+    }
+
+</script>
+</html>
