@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var archivojson = {
+        nombre: "Los pepitos",
+        direccion: "Calle Pepito 123",
+        telefono: "123456789",
+        ciudad: "Madrid",
+        venta: true,
+        libros: [
+          {
+            titulo: "El Quijote",
+            autor: [
+              {
+                nombre: "Miguel de Cervantes",
+              },
+              {
+                nombre: "Juan cocunero",
+              },
+            ],
+            añoPublicacion: 1605,
+            generos: [
+              {
+                genero: "Novela",
+              },
+              {
+                genero: "Aventura",
+              },
+            ],
+            comentarios: [
+              {
+                nick: "Juan",
+                comentario: "Me encanta este libro",
+              },
+            ],
+          },
+        ],
+      };
+    </script>
+    <style>
+        textarea {
+            padding: 10px;
+            background-color: rgb(25, 78, 78);
+            color: white;
+            border-radius: 10px;
+            border: 5px solid rgb(232, 107, 18);
+        }
+        input[type="button"] {
+            padding: 10px;
+            background-color: rgb(86, 142, 162);
+            color: white;
+            border-radius: 10px;
+            border: 1px solid rgb(64, 49, 177);
+        }
+        label {
+            color: rgb(44, 123, 160);
+            font-size: x-large;
+            font-weight: 800;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="">
+        <label for="idArea">Datos leidos del json</label><br>
+        <textarea name="idArea" id="idArea" style="width: 90%;height: 400px;"></textarea>
+        <br><br>
+        <input type="button" onclick="Borrar()" value="Borrar" /> 
+        <input type="button" onclick="lecturaNombre()" value="Nombre" />
+        <input type="button" onclick="direccion()" value="Direccion" /> 
+        <input type="button" onclick="telefono()" value="Telefono" />
+        <input type="button" onclick="venta()" value="Venta" />
+    </form>
+  </body>
+  <script>
+    function Borrar() {
+        document.getElementById("idArea").value = "";
+    }
+
+    function lecturaNombre() {
+        var nombre = archivojson.nombre;
+        var area = document.getElementById("idArea");
+        area.value = area.value + nombre + "\n";
+    
+    }
+
+    function direccion() {
+        var direccion = archivojson.direccion;
+        var area = document.getElementById("idArea");
+        area.value = area.value + direccion + "\n";
+    }
+
+    function telefono() {
+        var telefono = archivojson.telefono;
+        var area = document.getElementById("idArea");
+        area.value = area.value + telefono + "\n";
+    }
+
+    function venta() {
+        var venta = archivojson.venta;
+        var area = document.getElementById("idArea");
+        area.value = area.value + venta + "\n";
+    }
+
+  </script>
+</html>

@@ -1,0 +1,24 @@
+package Tema6.Ej1Repaso.services;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class OpenConnection {
+
+	public Connection getNewConnection() throws SQLException{
+		String usuario = "PROG";
+		String password = "ceu";
+		String driverClass = "oracle.jdbc.driver.OracleDriver";
+		String url = "jdbc:oracle:thin:@localhost:1521/XE";
+		try {
+			Class.forName(driverClass);
+			
+		}catch(ClassNotFoundException e ) {
+			System.out.println("No se encuentra el driver JDBC. Revisa su configuración");
+			throw new RuntimeException(e);
+		}
+		Connection conn = DriverManager.getConnection(url,usuario,password);
+		return conn;
+	}
+}

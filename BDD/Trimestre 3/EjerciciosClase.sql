@@ -38,3 +38,5 @@ BEGIN
     END IF;
 END;
 /
+
+SELECT * FROM productos_gourmet; 

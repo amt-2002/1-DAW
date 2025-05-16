@@ -1,0 +1,35 @@
+{ 
+    "nombre": "Los pepitos", 
+    "direccion": "Calle Pepito 123",
+    "telefono": "123456789",
+    "ciudad": "Madrid",
+    "venta": true,
+    "libros" : [
+        {
+            "titulo": "El Quijote",
+            "autor": [
+                {
+                    "nombre": "Miguel de Cervantes"
+                },
+                {
+                    "nombre": "Juan cocunero"
+                }      
+            ],
+            "añoPublicacion": 1605, 
+            "generos": [
+                {
+                    "genero": "Novela"
+                },
+                {
+                    "genero": "Aventura"    
+                }
+            ],
+            "comentarios" : [
+                {
+                    "nick": "Juan",
+                    "comentario": "Me encanta este libro"
+                }
+            ]
+        }
+    ]
+}

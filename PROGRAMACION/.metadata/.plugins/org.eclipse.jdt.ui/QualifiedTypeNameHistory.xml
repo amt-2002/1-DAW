@@ -17,18 +17,19 @@
     <fullyQualifiedTypeName name="Tema4.Ej59.Geografia"/>
     <fullyQualifiedTypeName name="Tema5.Ej6.ParametroIncorrectoException"/>
     <fullyQualifiedTypeName name="Tema5.Ej7.ListaVaciaException"/>
-    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
     <fullyQualifiedTypeName name="Tema5.Ej7.Sociedad"/>
     <fullyQualifiedTypeName name="Tema5.Ej7.ParametroIncorrectoException"/>
-    <fullyQualifiedTypeName name="java.math.RoundingMode"/>
     <fullyQualifiedTypeName name="java.sql.DriverManager"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.time.format.DateTimeParseException"/>
     <fullyQualifiedTypeName name="Tema6.Ej3.services.PersonasServive"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="java.math.BigDecimal"/>
+    <fullyQualifiedTypeName name="Tema6.Ej1Repaso.services.ProductoNoEncontradoException"/>
+    <fullyQualifiedTypeName name="java.math.RoundingMode"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
