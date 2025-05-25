@@ -1,6 +1,7 @@
 package modelo;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Jugador {
 
@@ -45,10 +46,9 @@ public class Jugador {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
-	@Override
-	public String toString() {
-		return "Jugador [numero=" + numero + ", codEquipo=" + codEquipo + ", nombre=" + nombre + ", fechaNacimiento="
-				+ fechaNacimiento + "]";
-	}
+    @Override
+    public String toString() {
+        return numero + " - " + nombre + " - " + fechaNacimiento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
 
 }

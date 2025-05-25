@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="salir"/>
+		<item value="mostrarMenuEquipo"/>
+		<item value="crearEquipo"/>
+		<item value="date"/>
+	</list>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="selection" value="Error al introducir el usuario"/>
 		<item key="wrap" value="true"/>

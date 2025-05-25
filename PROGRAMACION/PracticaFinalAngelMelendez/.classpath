@@ -7,5 +7,6 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/amelendez2845/OneDrive - Fundación Universitaria San Pablo CEU/Escritorio/ojdbc17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/melen/Desktop/ojdbc17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

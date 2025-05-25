@@ -57,9 +57,9 @@ public class Equipo {
 		return mediaAños.setScale(2, RoundingMode.HALF_DOWN); 
 	}
 	
-	@Override
-	public String toString() {
-		return "Equipo [codigo=" + codigo + ", nombre=" + nombre + ", jugadores=" + jugadores + "]";
-	}
+   @Override
+    public String toString() {
+        return "EQUIPO: " + codigo + " / " + nombre;
+    }
 
 }
